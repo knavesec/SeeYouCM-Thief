@@ -416,7 +416,7 @@ if __name__ == '__main__':
         print('Unable to detect file names from CUCM, or no viable targets exits in ConfigFileCacheList.txt')
     else:
         for file in file_names:
-            search_for_secrets(CUCM_host,file)
+            search_for_secrets(CUCM_host,TFTP_hosts,file)
 
     if found_credentials != []:
         print('Credentials Found in Configurations!')
